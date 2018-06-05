@@ -1,0 +1,107 @@
+@import "../../../static/less/common";
+.comment_listbox{
+  h4{
+    padding: 0 1em; margin: 0; font-weight: bold; background-color: #f4f3f1; height: 50px; line-height: 50px;
+    small{ color: #A0B2B2; cursor: pointer; margin-left: 2em; border: 1px solid #dcdcdc; background-color: #fff; height: 23px; line-height: 23px; display: inline-block; padding: 0 .7em;}
+  }
+  .commentItem{
+    display: flex; flex-direction: column; padding: 0 1em; border: 1px solid #dcdcdc;
+		.comment_box{
+			display: flex; flex-direction: row;
+			.avatar{ border-radius: 50%; width: 45px; height: 45px; margin-top: 1.5em;}
+			.body{
+				display: flex; flex-direction: column; margin-left: 1em; flex: 1;
+				.nickname{ color: #FF8500; height: 30px; line-height: 38px;}
+				.comment_content{ line-height: 20px; color: #4b4b4b; word-wrap: break-word; word-break: break-all;}
+				.otherinfo{
+					display: flex; justify-content: space-between; padding-bottom: 10px; margin-top: 1em;
+					.date{color: #999;}
+					.operation_area{
+						display: flex;
+						div{
+							margin-left: 33px; color: #999; cursor: pointer;
+							i{ margin-right: 7px; }
+						}
+						.zan{
+							&::after{ content: "赞";}
+							&:hover{ color: @base;}
+						}
+						.reply{
+							&::after{ content: "回复";}
+							&:hover{ color: @base;}
+						}
+					}
+				}
+			}
+		}
+		.lreply_box{
+			display: flex; flex-direction: column;
+			.lreply{
+				display: flex; line-height: 22px; justify-content: space-between; margin-bottom: .2em;
+				.lreply_body{
+					display: flex; flex-grow: 1;
+					.uname{ color: #ff8500; flex-basis: 110px;}
+					.reply_content { flex-grow: 1;}
+				}
+				.reply_time{ color: #999; flex-basis: 110px; margin-left: 1em;}
+			}
+		}
+		.reply_box{
+			.comment_box; margin-bottom: .7em; margin-top: .7em;
+			.avatar{
+				.comment_box .avatar;
+				margin-top: 0em;
+			}
+			.body{
+				.comment_box .body; flex-grow: 1;
+				textarea{
+					flex-grow: 1;
+					border: 1px solid #d0ccc7;
+					margin-right: 1em;
+					padding: .3em;
+					border-radius: 5px;
+					height: 45px;
+				}
+				.foot{
+					margin-top: 7px;
+					display: flex;
+					justify-content: space-between;
+					.remain-box{
+						color: @base;
+						margin-right: 5px;
+						line-height: 24px;
+						margin-left: 120px;
+						visibility: hidden;
+						.remain{
+							margin-left: 5px;
+							margin-right: 5px;
+							color: red;
+							font-weight: 700;
+						}
+					}
+					button{
+						background-color: #e1e1e1;
+						color: #717171;
+						width: 80px;
+						margin-right: 15px;
+						cursor: not-allowed;
+						&.btn_on{
+							cursor: pointer;
+							color: #fff;
+							background-color: #337ab7;
+							border-color: #2e6da4;
+						}
+					}
+				}
+			}
+		}
+  }
+	.more{
+		display: flex;
+    justify-content: center;
+    height: 3em;
+    line-height: 3em;
+    color: #777;
+    cursor: pointer;
+	}
+}

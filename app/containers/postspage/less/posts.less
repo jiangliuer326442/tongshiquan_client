@@ -1,0 +1,57 @@
+@import "../../../static/less/common";
+@padding: 20px;
+
+.posts{
+  display: flex; flex-direction: column; background-color: @bg; margin-left: 0 !important; border-top-width: 1px;
+  h2{
+    height: 35px; line-height: 35px; background-color: #f3f3f3; color: #736E75; font-weight: bold; font-size: 1em; border-top: 3px solid #346B93; margin: 0; padding: 0 @padding;
+    i { color: #4A4B4C; font-weight: normal; font-style: normal;}
+  }
+  .body{
+    display: flex; margin: @padding; align-items: center; color: #818181;
+    img{ margin-right: @padding; width: 50px; height: 50px; border-radius: 5px;}
+    .content{
+      display: flex; flex-direction: column; padding: 0;
+      .num{
+        font-size: 1em;
+        i{ color: #CE9985; margin-left: 3px; margin-right: 3px; font-weight: bold;}
+      }
+    }
+  }
+}
+
+.postlists{
+	background-color: @bg; padding:  0 5px;
+  .postlistssub{
+    display: flex; justify-content: space-between; align-items: center; padding: 0 @padding;
+    button{ background: linear-gradient(#F7AF0D, #EC7B01); padding: 6px 20px; height: 40px;}
+  }
+	.poststable{
+		thead{
+      color: #888888; background-color: #f3f9fb; border-bottom: 1px solid #c5d8e8; border-top: 1px solid #c5d8e8; font-size: .8em; line-height: 1em;
+      th{ line-height: 1em; padding-left: 2em;}
+    }
+    tbody{
+      tr{
+        td{ height: 1em; line-height: 1em;}
+        .title{
+          vertical-align: middle;
+          img{ margin-left: 15px; margin-right: 10px;}
+          a{
+            color: #333;
+            &:hover{ text-decoration: underline !important;}
+          }
+        }
+        .nick{
+          a{
+            color: #444; font-size: .8em;
+            &:hover{ text-decoration: underline !important;}
+          }
+        }
+        .date{
+          color: #999; font-size: .8em; height: 2em; line-height: 2em;
+        }
+      }
+    }
+	}
+}

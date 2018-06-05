@@ -1,0 +1,25 @@
+@import "../../../containers/chat/less/index";
+
+.lasttalk{
+	padding: 0 @left_padding;
+	.userlist{
+		.useritem{
+			height: 50px; cursor: pointer; display: flex; align-items: center; line-height: normal !important;
+			&.current{
+				background-color: #3B4047;
+			}
+			.avatar{
+				width: 30px; height: 30px;
+			}
+			.right{
+				display: flex; flex-direction: column; background-color: transparent;
+				.username{
+					color: #fff; font-weight: bold; margin-left: .8em; font-size: 1em;
+				}
+				.lastchat{
+					color: #989898; margin-left: .8em; font-size: .6em;
+				}
+			}
+		}
+	}
+}

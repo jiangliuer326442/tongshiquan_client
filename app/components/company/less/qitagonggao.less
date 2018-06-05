@@ -1,0 +1,39 @@
+@import "../../../static/less/common";
+@box_width: 55%;
+
+.othernotice{
+	background-color: @bg; width: @box_width; height: 552px;
+	.tab_box{
+		width: 100%; height: 48px; line-height: 48px; display: flex; border: 1px solid @border; list-style: none;
+		li {
+			flex: 1; font-size: 1.2em; cursor: pointer; text-align: center; border-left: 1px solid @border; color: #020012;
+			&:hover { color: @red;}
+			&.current { border-bottom: 1px solid @red; color: @red;}
+		}
+	}
+	.articlelist{
+    display: flex; flex-flow: column nowrap; padding: 0 12px;
+    .article{
+      width: 100%; margin-top: 10px; display: flex; margin-bottom: 10px; cursor: pointer;
+      img{
+        width: 148px; height: 90px; margin-right: 20px;
+      }
+      .texts{
+        display: flex; flex-flow: column no-wrap; width: @width*0.55-146px-20px-12px*2;
+        h3{ 
+					margin-top: 0px; margin-bottom: 0px; margin-top: 5px; font-size: 1.3em; font-weight: bold;
+					a { color: #026390; line-height: 1.35em;}
+				}
+        article{ color: #9F9F9F; font-size: 0.9em; margin-top: 7px;}
+      }
+			&:hover{
+				.texts{
+					h3{
+						a{ color: rgb(243,152,1);}
+					}
+					article{ color: rgb(102,102,102);}
+				}
+			}
+    }
+  }
+}

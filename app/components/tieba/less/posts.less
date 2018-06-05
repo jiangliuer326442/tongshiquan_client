@@ -1,0 +1,28 @@
+@import "../../../static/less/common";
+.posts{
+	background-color: @bg; flex: 1; margin-left: 20px; border-top: 3px solid #045594;
+	.title{ height:32px; line-height: 32px; background-color: #f7f7f7; width: 100%; font-size: 1em; margin: 0; padding: 0 12px;}
+	.content{
+		padding: 15px 30px;
+		h2{ 
+			margin: 0; border-width: 0; font-size: 1.2em;
+			a{ color: #2D00F9;}
+			.tieba:hover { color: rgb(0,159,232);}
+			.post:hover{ color: rgb(243,152,1);}
+		}
+		p{ 
+			margin-top: 10px; font-size: 1em; line-height: 1.4em; color: #636363;
+			&:hover{ color: #000;}
+		}
+		ul{
+			list-style: none;
+			li{
+				font-size: 1.1em; line-height: 1.7em;
+				.tieba{ color: #BC7C3F;}
+				.post{ color: #202020;}
+				.tieba:hover { color: rgb(0,159,232);}
+				.post:hover{ color: rgb(243,152,1);}
+			}
+		}
+	}
+}

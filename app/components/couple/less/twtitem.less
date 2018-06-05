@@ -1,0 +1,147 @@
+@import "../../../static/less/common";
+
+.twtitem{
+	display: flex; flex-direction: column; margin: 1em 0 2em 0; border-bottom: 1px solid #fae1e7; 
+	.head{
+		display: flex; justify-content: space-between;
+		.left{
+			display: flex; align-items: center;
+			.avatar{
+				width: 52px; height: 45px; border-radius: 15px; margin-right: .7em;
+			}
+			.username{
+				a{
+					font-size: 1.2em;
+				}
+				.useraction{
+					color: gray; font-size: 1em; margin-left: .3em;
+				}
+			}
+			.addtime{
+				color: #8c7e83;
+				.visible{
+					margin-left: 1em;
+				}
+			}
+		}
+		.right{
+			display: flex; flex-direction: column; align-items: flex-end; padding-right: 1em;
+			.glyphicon-chevron-down{
+				font-size: 1.2em; cursor: pointer;
+				&:hover{
+					color: @bred;
+				}
+			}
+			.hidebox{
+				position: relative;
+				ul{
+					position: absolute; left: -140px; padding-top: .7em; padding-bottom: .5em; width: 140px; top: 10px; border: 1px solid #f5dce4;
+					li{
+						cursor: pointer;
+						i{
+							font-size: 1.2em; margin-right: .7em;
+						}
+					}
+				}
+			}
+		}
+	}
+	.body{
+		margin-top: .3em;
+	}
+	.aside{
+		margin-top: .3em; flex: 1;
+		.linkto{
+			border: 1px solid #f5dce4; margin: .5em 0; padding: 0 .5em;
+			h2{
+				font-size: 1.4em; cursor: pointer;
+			}
+			p{
+				color: #8c7e83; cursor: pointer;
+			}
+			h2:hover, p:hover {
+				text-decoration: underline;
+			}
+			&:hover{
+				background-color: #fae1e7;
+			}
+		}
+		.imglist{
+			display: flex; flex-wrap: wrap;
+			.imgitem{ 
+				flex: 1; margin-right: .5em; margin-bottom: .5em; min-width: 32%;
+				img{
+					width: 100%; height: auto; max-width: 250px;
+				}
+			}
+		}
+	}
+	.commentArea{
+		display: flex; padding: 0 1em; justify-content: space-between; align-items: center;
+		i{
+			font-size: 2em; margin-left: 1em; cursor: pointer;
+			&:hover{
+				color: @bred;
+			}
+		}
+		.left{
+			.zan_num{
+				color: @bred;
+			}
+		}
+	}
+	.comment_box{
+		display: flex; flex-direction: column; margin: .5em 0;
+		textarea{
+			flex: 1; border: 1px solid #fae1e7; padding: .3em 1em; outline: none;
+		}
+		.submit_btn{
+			background-color: #d2809a; color: #fff; width: 77px; height: 30px; outline: none; margin-top: .3em; align-self: flex-end;
+		}
+	}
+	.commentls_box{
+		display: flex; flex-direction: column; margin-top: .5em;
+		.comment{
+			display: flex; flex-direction: column; margin-bottom: .2em;
+			.comment_item{
+				display: flex;
+				.avatar{
+					width: 40px; height: 40px; border-radius: 50%;
+				}
+				.comment_body{
+					display: flex; flex-direction: column; margin-left: .5em;
+					.comment_body_core{
+						display: flex;
+						.comment_nick{
+							color: @bred; cursor: pointer;
+							&::after{
+								content: " ：";
+							}
+							&:hover{
+								text-decoration: underline;
+							}
+						}
+					}
+					.comment_date{
+						color: #8c7e83; font-size: .8em; display: flex; align-items: center;
+						.icon--huifu{
+							margin-left: .5em;
+							&:hover{
+								color: @bred;
+							}
+						}
+					}
+				}
+			}
+			.reply_item{
+				display: flex; flex: 1; margin-bottom: .5em; flex-direction: column;
+				textarea{
+					flex: 1; border: 1px solid #fae1e7; padding: .3em 1em; outline: none;
+				}
+				.submit_btn{
+					background-color: #d2809a; color: #fff; width: 77px; height: 30px; outline: none; margin-top: .3em; align-self: flex-end;
+				}
+			}
+		}
+	}
+}

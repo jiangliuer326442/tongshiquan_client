@@ -1,0 +1,25 @@
+@import "../../../../static/less/common";
+
+.bduser{
+	display: flex; flex-direction: column;
+	.phone_label{
+		font-size: 1.1em; height: 25px; line-height: 25px;
+	}
+	.phone{
+		 width: 250px; border: 2px solid #ccc; height: 30px; line-height: 30px; padding-left: 8px; color: @base; font-weight: bolder;
+	}
+	.codes_box{ 
+		display: flex; flex-direction: row; margin-top: 10px; align-items: center;
+		label{
+			font-size: 1.1em; height: 39px; line-height: 39px;
+		}
+		input{
+			border: 2px solid #ccc; height: 30px; line-height: 30px; padding-left: 8px; width: 90px; margin-left: 5px; flex-grow: 1;
+		}
+		button{ border-radius: 5px;}
+	}
+	.checkbox_box{
+		display: flex; flex-direction: row; margin-top: 7px; align-items: center;
+	}
+	button{ margin-top: 10px; align-self: flex-end; border-radius: 5px;}
+}

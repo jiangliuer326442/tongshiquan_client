@@ -1,0 +1,29 @@
+@import "../../../static/less/common";
+
+.withmyreply{
+    background-color: @bg; display: flex; min-height: 900px;
+    .right{
+        width: 900px; display: flex; flex-direction: column; margin: 2.5em  1.5em;
+        .commentItem{ 
+            display: flex; flex-direction: column; padding: 0 1em; border: 1px solid #dcdcdc;
+            .comment_box{
+                display: flex; flex-direction: row;
+                .avatar{ border-radius: 50%; width: 45px; height: 45px; margin-top: 1.5em;}
+                .body{
+                    display: flex; flex-direction: column; margin-left: 1em; flex: 1;
+                    .nickname{ color: #FF8500; height: 30px; line-height: 38px;}
+                    .comment_content{ 
+                        line-height: 20px; color: #4b4b4b; word-wrap: break-word; word-break: break-all;
+                        img{
+                            max-height: 80px;
+                        }
+                    }
+                    .otherinfo{
+                        display: flex; justify-content: space-between; padding-bottom: 10px; margin-top: 1em;
+                        .date{color: #999;}
+                    }
+                }
+            }
+        }
+    }
+}

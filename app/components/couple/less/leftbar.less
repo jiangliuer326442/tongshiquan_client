@@ -1,0 +1,27 @@
+@import "../../../static/less/common";
+.couple{
+  ul{
+      background-color: @bg; padding-top: 4px; padding-bottom: 9px; border: 1px solid @base2;
+      li{
+          list-style: none; padding: 0 17px; line-height: 34px; height: 34px;
+          a{
+               color: gray;
+          }
+          .clubfriends{
+              margin-right: 9px; font-size: 1.2em;
+          }
+          &:hover{
+            background-color: @base2;
+          }
+      }
+      .current{
+          background-color: @base2; font-weight: bold;
+          a{
+              color: #332F30;
+              .clubfriends{
+                color: #D07A98;
+              }
+          }
+      }
+  }
+}

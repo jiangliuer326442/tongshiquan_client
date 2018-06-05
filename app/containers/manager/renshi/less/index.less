@@ -1,0 +1,54 @@
+@import "../../../../static/less/common";
+.department{ width: 219px; min-height: 700px; border-right: 1px solid #D2D2D2; overflow: hidden; background: #f4f7fa; padding-top: 50px; font-size: 1.2em;
+    .department-item{ 
+        height: 30px; line-height: 30px;
+        .icon--wenjianjia{color: #94B4D5; margin-left: 3px; margin-right: 7px;}
+        &.selected{ background-color: #D9E3EC;}
+        .icon--right-triangle{ cursor: pointer;}
+    }
+    .level0{
+        padding-left: 8px;
+    }
+    .level1{
+        padding-left: 16px;
+    }
+    .level2{
+        padding-left: 24px;
+    }
+}
+.department_body{
+    background: @bg; flex: 1; padding: .8em 1em;
+    .header{
+        h1{
+            font-size: 1.4em; font-weight: bold;
+        }
+        .department_operator{
+            a:not(:last-child){
+                &:after{ content:" | ";}
+            }
+        }
+        .department_mnum{
+            height: 40px; line-height: 40px; color: #7d7d7d;
+        }
+    }
+    .employees{
+        .employee{
+            display: block; padding-left: 1em; height: 30px; line-height: 30px; color: @base;
+            &:first-child{ 
+                border: 1px solid #D6D6D6; border-width: 1px 0px 1px 0px; background-color: #F1F1F1; height: 40px; line-height: 40px; margin-bottom: .5em;
+                button{
+                    margin-left: 1em; margin-bottom: .3em;
+                }
+            }
+            .user-select{ margin-right: .3em;}
+            .icon--yonghu{ margin-left: .3em; margin-right: .6em;}
+            .username{ 
+                margin-right: 3em; width: 5em; display: inline-block; cursor: pointer;
+                &:hover{ text-decoration: underline;}
+            }
+            .mail{ margin-left: 1em; margin-right: 3em;}
+            .phone{ margin-left: 1em; margin-right: 3em;}
+            .groupname{ color: #333; margin-left: 3em;}
+        }
+    }
+}

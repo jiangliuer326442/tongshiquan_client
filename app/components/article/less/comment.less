@@ -1,0 +1,51 @@
+@import "../../../static/less/common";
+
+.comment{
+	border: 1px solid @border; margin-top: -11px; margin-left: 2.5em; border-right-width: 0px;
+	.comment_addbox{
+		border-bottom: 1px solid #d0ccc7; padding-bottom: 1em;
+		.header{
+			.cross{ margin-left: -2em; margin-top: -.7em; cursor: pointer;}
+			.logo{ margin-left: 2em; margin-top: .3em;}
+			.pull-right{
+				font-size: 1.1em; height: 40px; line-height: 40px; font-weight: bold; margin-right: 2em;
+				em{ color: #d52643; margin-left: 1em;}
+			}
+		}
+		.body{
+			display: flex;
+			.left{
+				display: flex; flex-direction: column; margin-top: 2em; margin-left: 2em; width: 70px; align-items: center; color: #D48B56;
+				img{ width: 70px; height: 70px;}
+			}
+			textarea{
+				flex-grow: 1; margin-left: 1em; border: 1px solid #d0ccc7; margin-top: 1em; margin-right: 1em; padding: 1em; border-radius: 5px;
+			}
+		}
+		.foot{
+			margin-top: 7px; display: flex; justify-content: space-between;
+			a{ 
+				cursor: pointer; margin-left: 120px; color: #717171; border-width: 0px;
+				&:hover{
+					background-color: #fff;
+				}
+				.icon--face{
+					color: #d58512; font-size: 1.5em;
+				}
+			}
+			#facebox{
+				position: relative;
+				table{
+					margin-left: 120px; background-color: #fff; position: absolute;
+				}
+			}
+			button{ background-color: #e1e1e1; color: #717171; width: 80px; margin-right: 15px; cursor: not-allowed;}
+			.btn_on{ cursor: pointer; color: #fff; background-color: #337ab7; border-color: #2e6da4;}
+			.btn_on:hover{ background-color: #2e6da4;}
+			.remain-box{
+				color: @base; margin-right: 5px; line-height: 24px; visibility:hidden;
+				.remain{ margin-left: 5px; margin-right: 5px; color: red; font-weight: bold;}
+			}
+		}
+	}
+}

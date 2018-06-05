@@ -1,0 +1,48 @@
+@import "../../../static/less/common";
+
+.mymsg{
+     display: flex; background-color: @bg; min-height: 900px;
+    .right{
+        width: 900px; display: flex; flex-direction: column; margin: 2.5em  1.5em;
+        .header{
+            height: 42px; line-height: 42px; background-color: @base; display: flex; align-items: center;
+            a{
+                height: 32px; line-height: 32px; padding: 0 17px; margin-left: 17px; color: @bg; border-radius: 3px; 
+                &:hover,&.current{
+                     background-color: @bg ; color: @base;
+                }
+            }
+        }
+        .msglist{
+            margin-top: 1em;
+            .msgitem{
+                display: flex; cursor: pointer; margin-bottom: 1em;
+                .avatar{ width: 50px; height: 50px; margin-right: 1.5em;}
+                .body{
+                    flex: 1;
+                    .line{
+                        display: flex;
+                        .username{ flex: 1;}
+                        .date{ color: gray; width: 153px;}
+                    }
+                    .content{
+                        font-size: .9em; color: grey; line-height: 1.5em; margin-top: .3em;
+                    }
+                }
+                .reply-box{
+                    display: none;
+                    .reply{
+                        margin-top: .5em; display: flex; height: 2em;
+                        textarea{ margin-right: 1em; line-height: 2em; flex: 1; padding: 0 1em;}
+                    }
+                }
+                &.hasread{
+                    cursor: default;
+                    .content,.date{
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import "../../../static/less/common";
+.article{
+  background-color: @bg; padding-top: .1em;
+  h2{ font-size: 2.3em; font-weight: bold; margin-left: 2em;}
+  .lead{
+    font-weight: bold; height: 60px; line-height: 30px; margin-bottom: 0px; border-bottom: 1px solid #d0ccc7; display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 10px;
+		.main{
+			display: flex; align-items: flex-end;
+			.commentnum{ color: #FF8001; font-size: 1.5em; margin-left: 1em; margin-right: 0.3em;}
+			.commenttext{ font-weight: normal; font-size: .9em;}
+			.glyphicon-edit{ color: #FF8001; font-size: 1.5em; margin-left: .6em; font-weight: 200;}
+		}
+    .date{ margin-right: 20%;}
+  }
+  .mainbox{
+    width: 100%; display: flex; margin-top: .7em;
+    .content{ 
+      width: 60%; margin-left: 2em; float: left; font-size: 1.3em; font-family: "微软雅黑";
+	  p{
+		word-wrap: break-all;
+	  }
+      img{
+        max-width: 100%;
+      }
+    }
+		.subbox{ width: 40%;}
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../../static/less/common";
+.mainsection{
+  background-color: @bg; -moz-box-shadow:2px 2px 5px #A5A5A5; -webkit-box-shadow:2px 2px 5px #A5A5A5; box-shadow:2px 2px 5px #A5A5A5; height: 230px; border: 1px solid #d5d5d5;
+  .title{ color: @base; font-size: 1.3em; margin-left: 20px;}
+  .articlelist{
+    display: flex; flex-flow: row wrap; padding: 0 12px;
+    .article{
+      width: 33%; height: 84px; margin-top: 5px; display: flex;
+      img{
+        width: 89px; height: 58px; margin-right: 20px;
+      }
+      .texts{
+        display: flex; flex-flow: column no-wrap; width: @width/3-89px-12px*2-20px;
+        h3{ color: @base; font-size: 1.1em; margin-top: 0px; margin-bottom: 0px; height: 2em; line-height: 2em; margin-top: 5px;}
+        article{ color: #9F9F9F; font-size: 0.9em;}
+      }
+    }
+  }
+}

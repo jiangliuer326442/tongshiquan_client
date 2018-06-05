@@ -1,0 +1,36 @@
+@import "../../../static/less/common";
+@left_width: 150px;
+
+.postdetail{
+	border: 1px solid #9fb7e7; border-top: 2px solid #065792; background-color: @bg;
+	.readtimes,.replynums{
+		font-size: .8em; width: @left_width/2; padding-left: 10px;
+		em{ font-size: 1.2em; font-weight: bold;}
+	}
+	.title{ color: #014c90; font-size: 1.2em; font-weight: bold; padding: 20px;}
+	.username{
+		 height: 2em; line-height: 2em; padding-left: 20px;
+		a{
+			text-decoration: none; color: #333333; font-weight: bold;
+			& :hover{ text-decoration: underline !important;}
+		}
+	}
+	.avatar{
+		display: flex; flex-direction: column;  padding-bottom: 10px; padding-top: 10px; align-items: center;
+		img { width: 100px; height: 100px;}
+		.interact {
+			display: flex; justify-content: space-between; width: 100px; flex-direction: row; line-height: 1.5em;
+			a{ font-size: .8em; width: 50%;}
+			.uncare{ color: #aaa;}
+		}
+	}
+	.reply_box{
+		padding: 20px;
+		button { margin-top: 10px;}
+	}
+	.date { color: #666; font-size: .8em; height: 2em; line-height: 2em;}
+	.content{
+		padding: 20px; font-size: 1em;
+		img{ max-width: 70%;}
+	}
+}

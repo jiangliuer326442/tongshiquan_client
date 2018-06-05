@@ -1,0 +1,43 @@
+.card_userinfo{
+	display: flex; align-items: center; justify-content: center; flex: 1; flex-flow: column nowrap;
+	p{
+		margin: 0; font-size: .8em; color: #888; line-height: 1.7em; display: flex; align-items: center;
+		label{
+			width: 170px;
+		}
+	}
+	.card_btn{ width: 12em;}
+	.card_body{
+		display: flex;
+		.card_left{
+			 width: 136px; height: 136px; margin-right: 1em;
+			.card_avatar{ width: 136px; height: 136px; border-radius: 2px;}
+		}
+		.card_right{
+			display: flex; flex-direction: column;
+			.card_uname{
+				font-family: "KaiTi"; font-weight: bold; margin-top: 0px;
+				.card_markname{
+					.glyphicon-edit{ 
+						color: #efad4d;
+						font-weight: bold;
+						margin-left: .3em;
+						font-size: 1.3em;
+						cursor: pointer;
+					}
+				}
+			}
+			.btn-success{
+				margin-top: .5em;
+			}
+			.card_companyname{ font-size: 1.1em; height: 40px; line-height: 30px; margin-top: .5em; color: #000; }
+		}
+	}
+	.card_operateinfo{
+		display: flex; flex-direction: column; margin-top: 1em;
+		p{ margin-bottom: .5em;}
+	}
+	.btn-danger,.btn-primary{
+		margin-top: 1em;
+	}
+}

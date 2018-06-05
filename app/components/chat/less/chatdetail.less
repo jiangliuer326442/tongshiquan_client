@@ -1,0 +1,48 @@
+@import "../../../static/less/common";
+
+@padding: 10px;
+
+.userdetail{
+	padding: 0 @padding; height: 100%; display: flex; flex-flow: column nowrap;
+	h2{ 
+		height: 50px; line-height: 50px; width: 100%; font-size: 1em; border-bottom: 2px solid #D6D6D6; margin: 0; display: flex; justify-content:center;
+	}
+	.chatlog{
+		flex: 1; padding: @padding; overflow-y: scroll;
+		&.nocontents{
+			justify-content: center; align-items:center; color: #ccc;
+		}
+		.chatitem{
+			display: flex; align-items: center; margin: 6px 0;
+			&.mine{
+				justify-content: flex-end;
+				.avatar{ order: 2;}
+				.content{ order: 1; background-color: #B2E281;}
+				.chatimg{ order: 1; background-color: #B2E281;}
+			}
+			&.yours{
+				justify-content: flex-start;
+				.avatar{ order: 1;}
+				.content{ order: 2; background-color: #fff;}
+				.chatimg{ order: 2; background-color: #fff;}
+			}
+			.chatimg{ margin: 0px 12px; max-width: 300px; max-height: 300px;}
+			.avatar{ width: 42px; height: 42px;}
+			.content{ margin: 0px 12px; padding: 6px 12px; font-size: 1em;}
+		}
+	}
+	.chattool{
+		border: 1px solid @border; height: 43px; line-height: 43px; padding: 0 @padding; display: flex; cursor: pointer;
+		.clubfriends{ font-size: 1.6em; font-weight: bold; margin: 0 .3em;}
+		#facebox{line-height: 27px;}
+	}
+	.chatinput{
+		height: 118px; padding: @padding;
+		textarea{ width: 100%; height: 100%; background-color: transparent; border: 0px; outline: none;}
+	}
+	.chatsend{
+		height: 53px; padding: 10px @padding; display: flex; justify-content: flex-end; align-items: center;
+		em{ color: #888; font-size: .8em; margin-right: 1em;}
+		button{ width: 90px;}
+	}
+}

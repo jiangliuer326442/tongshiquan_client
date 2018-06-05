@@ -1,0 +1,32 @@
+@import "../../../static/less/common";
+
+.login_box{
+    width: 400px; 
+    margin: 7% auto auto auto; 
+    border-radius: 8px; 
+    padding: 55px;
+	background: url(../img/lockscreen.png) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    .tabs{
+        text-align: center;
+        .tabs_select{
+            margin: 0 .3em; height: 40px; padding: 10px; display: inline-block; color: #fff; font-size: 1.3em; cursor: pointer;
+            &.current{ color: @base; border-bottom: 2px solid @base;}
+            &:hover{ border-bottom: 2px solid @base;}
+        }
+    }
+    form{
+        margin-top: 2em; min-height: 220px;
+        &.tabs_login{
+            padding-top: 20px;
+            .btn-block{
+                margin-top: 35px;
+            }
+        }
+    }
+    .login_thirdparty{
+        margin-top: 30px; text-align: center;
+        h6{
+            color: #fff;
+        }
+    }
+}

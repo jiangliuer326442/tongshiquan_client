@@ -1,0 +1,112 @@
+@import "../../../static/less/common";
+
+.addtopicbox{
+    display: flex; background-color: @bg; flex-direction: column;
+    .mainbox{
+      display: flex; align-items: stretch;
+      textarea{
+          height: 70px;  flex: 1; border-radius: 3px; padding: 6px; padding-left: 1em; border: 1px solid @base2; outline: none;
+      }
+      a{
+          display: flex; justify-content: center;
+      }
+      .clubfriends{
+          width: 50px; display: flex; align-items: center; justify-content: center; background-color: #FFF2F5; font-size: 2em; color: gray; cursor: pointer; border: 1px solid @base2;
+          &:hover{
+              color: #D2809A;
+          }
+      }
+    }
+    .errmsg{
+      padding: 0 1em; height: 37px; line-height: 37px; color: gray; border: 1px solid @base2;
+      .glyphicon-remove{
+        margin-right: .5em; font-size: 1.2em;
+      }
+    }
+    .toolbar{
+      height: 40px; border: 1px solid @base2; display: flex; align-items: center; padding: 0 1em; width: 100%; flex: 1;
+      .clubfriends{
+        font-weight: bold; color: gray; cursor: pointer; flex: 1;
+        &:hover{
+          color: #D2809A;
+        }
+      }
+      .icon--biaoqing{
+        font-size: 1.4em;
+      }
+      .operate{
+        display: flex;
+        .visible{
+          color: gray; font-size: .9em; display: flex; align-items: center; width: 15em;
+          .dropdown{
+            margin-left: .3em; width: 3em;
+            button{
+              background-color: @bg; outline: none;
+              .caret{
+                margin-left: 1em;
+              }
+            }
+            ul{
+              left: -2.8em;
+              li{
+                padding: 0;
+                a{
+                  &:hover{
+                    background-color: #FFF2F5; color: #D2809A;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .submit_btn{
+          background-color: #D2809A; color: @bg; width: 77px; height: 30px; outline: none;
+        }
+      }
+      #facebox{
+        background-color: @bg; padding: .5em; margin-left: -15px;
+      }
+    }
+    .uploadimglist{
+      background-color: @bg;
+      .header{
+        padding: 0 1em; height: 42px; line-height: 42px; color: gray; font-size: 1em;
+        .icon--tupian{
+          margin-right: .5em; font-weight: bold; font-size: 1.2em
+        }
+        .glyphicon-remove{
+          cursor: pointer;
+          &:hover{
+            color: #D2809A;
+          }
+        }
+      }
+      .body{
+        display: flex; flex-wrap: wrap; flex: 1; align-items: flex-end; padding: 0 1em;
+        .imgblock{
+          width: 30%;  margin-right: .4em; margin-bottom: .4em; display: flex; align-items: flex-start;
+          .glyphicon-remove{
+            position: relative; color: @bg; background-color: black; cursor: pointer; padding: 4px; left: -23px; z-index: 3;
+          }
+          img{ width: 100%; height: auto; border: 1px solid @base2;}
+        }
+      }
+    }
+    .linkbox{
+      padding: 0 1em;
+      .header{
+        height: 40px; display: flex; align-items: center; justify-content: space-between;
+        .main{
+          .glyphicon-remove{
+            cursor: pointer;
+          }
+          .icon--lianjie{
+            margin-right: .3em;
+          }
+          input{
+            padding-left: 1em; width: 400px; margin-right: 1em;
+          }
+        }
+      }
+    }
+}
